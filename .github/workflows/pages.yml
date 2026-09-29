@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       # ponytail: one page for everything; add --toc or split by year when it gets long
       - run: sudo apt-get install -y -qq pandoc
-      - run: mkdir -p public && pandoc entries/*.md --standalone --metadata title=minuti.ae -o public/index.html
+      - run: mkdir -p public && pandoc entries/*.md --standalone --shift-heading-level-by=1 --metadata title=minuti.ae -o public/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
