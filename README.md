@@ -8,7 +8,7 @@ Create one Markdown file under `entries/`. That is the whole contract. Turning a
 
 - Name it `YYYY-MM-DD-slug.md`: the date you recorded or last verified the fact, then a lowercase slug of letters, digits and hyphens.
 - Make the first line a `#` heading that names the fact.
-- Write the rest as plain Markdown. Fenced code blocks and links render.
+- Write the rest as plain Markdown in the `Human` and `Robot` sections described in [AGENTS.md](AGENTS.md). Fenced code blocks and links render.
 
 Every push to `main` rebuilds the single page at minuti.ae.
 

@@ -5,6 +5,7 @@
 - [ ] 1.1 Write `AGENTS.md` with the entry contract, the ingestion procedure (extract, sanity-check, fact-check, write, commit) and the provenance line rule; verify every `entry-ingestion` requirement maps to a step in it
 - [ ] 1.2 Add `CLAUDE.md` containing `@AGENTS.md` and a README pointer to `AGENTS.md`; verify `git diff --stat` shows only those three files plus the change artifacts
 - [ ] 1.3 Commit locally without pushing; verify `git status` shows the branch ahead of origin
+- [ ] 1.4 After review of test 2: move the contract to format 2 (marker, Human and Robot sections, signatures, closing rule, no migration of old entries) in `AGENTS.md`, the `entry-format` delta, README, proposal and design, and restructure the test entry to match; verify the entry has both sections, both signatures, the marker and the rule
 
 ## 2. Cold test
 

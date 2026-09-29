@@ -9,7 +9,7 @@ The site exists so that agents can turn a raw, half-certain message ("75 inches 
 - Add `AGENTS.md`: the agent-facing procedure for ingesting a raw tidbit into an entry (extract claims, sanity-check, fact-check, write, commit).
 - Add `CLAUDE.md` containing only an import of `AGENTS.md`, so Claude Code sessions load it automatically. Other agents read `AGENTS.md` directly.
 - Point the README at `AGENTS.md` for the ingestion procedure.
-- Extend the entry contract: each entry ends with a provenance line (as-of date, how each claim was established).
+- Extend the entry contract (format 2): a versioned marker, a `Human` section holding only verbatim words with a signature, a `Robot` section holding analysis and provenance signed with the AI make and model, and a closing rule. Existing entries are not migrated.
 - Prove the guide works with a cold test: a fresh agent given only a raw message, no other context, must produce a correct committed entry.
 
 ## Capabilities
@@ -23,5 +23,5 @@ The site exists so that agents can turn a raw, half-certain message ("75 inches 
 ## Impact
 
 - New files `AGENTS.md`, `CLAUDE.md`; README gains one pointer.
-- Existing entries already carry a "Verified <date>" line, so they satisfy the new provenance requirement.
+- Existing entries stay in format 1; the marker and the closing rule make the two eras visible on the page.
 - No pipeline, workflow, or hosting change.

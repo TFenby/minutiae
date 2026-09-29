@@ -1,6 +1,6 @@
 # 2022 Toyota Sienna Limited: cargo length with the second row slid fully forward
 
-<!-- minutiae entry format 2: Human section (verbatim submission and follow-ups, signed), then Robot section (analysis, signed with AI make and model) -->
+<!-- minutiae entry format 2 -->
 
 ## Human
 
@@ -13,8 +13,6 @@
 **Follow-up**
 
 > those measurements were taken with the second row seats pushed as far forwards as they'll go with the driver/passenger seats far enough forward to permit this.
-
-The other questions were not answered.
 
 Signed: Project owner
 
