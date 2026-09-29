@@ -16,4 +16,4 @@
 
 ## 3. Wrap-up
 
-- [ ] 3.1 Verify the test entry appears on https://minuti.ae after the deploy completes
+- [x] 3.1 Verify the test entry appears on https://minuti.ae after the deploy completes
