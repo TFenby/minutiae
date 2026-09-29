@@ -12,7 +12,7 @@ This repository publishes tiny hard-won facts at <https://minuti.ae>: one Markdo
 - Last line: `* * *`, a horizontal rule that marks the file boundary on the page. Not `---`, which pandoc can read as a metadata block.
 - Nothing else. No front matter. Touch no other file.
 
-When the format changes, the marker's number changes and the guide changes. Existing entries are never rewritten to the new format; the page shows the boundary between eras.
+When the format changes, the marker's number changes and the guide changes. Existing entries are never rewritten to the new format. Instead, add a divider file `entries/YYYY-MM-DD-0-format-N.md` (the `0` sorts it before that day's entries): a rule, a heading such as "Entry format N begins below", one sentence on what changed, and a closing rule. That is how the page shows where each generation begins.
 
 ## Ingesting a raw message
 
