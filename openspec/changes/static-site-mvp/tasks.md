@@ -15,7 +15,7 @@
 ## 3. Domain
 
 - [x] 3.1 (no `CNAME` file: Pages ignores it for Actions-built sites, so the domain was set with `gh api -X PUT .../pages -f cname=minuti.ae` and `https_enforced=true`) add a CNAME record at Cloudflare for the apex pointing to `tfenby.github.io` (DNS-only until the certificate issues), set the custom domain in Pages settings; verify `curl -sI https://minuti.ae/` returns 200 with a valid certificate
-- [ ] 3.2 Re-enable the Cloudflare proxy and verify `https://minuti.ae/` still returns the page
+- [x] 3.2 Keep the Cloudflare record DNS-only (decision 2026-09-28: the proxy adds nothing in front of GitHub Pages and trips its domain health check); verify GitHub's Pages health reports `is_valid`, `is_pointed_to_github_pages_ip` and `enforces_https` true with `is_proxied` false
 
 ## 4. Integration check
 
