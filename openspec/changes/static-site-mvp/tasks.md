@@ -14,9 +14,9 @@
 
 ## 3. Domain
 
-- [ ] 3.1 Add `CNAME` file containing `minuti.ae`, add a CNAME record at Cloudflare for the apex pointing to `tfenby.github.io` (DNS-only until the certificate issues), set the custom domain in Pages settings; verify `curl -sI https://minuti.ae/` returns 200 with a valid certificate
+- [x] 3.1 (no `CNAME` file: Pages ignores it for Actions-built sites, so the domain was set with `gh api -X PUT .../pages -f cname=minuti.ae` and `https_enforced=true`) add a CNAME record at Cloudflare for the apex pointing to `tfenby.github.io` (DNS-only until the certificate issues), set the custom domain in Pages settings; verify `curl -sI https://minuti.ae/` returns 200 with a valid certificate
 - [ ] 3.2 Re-enable the Cloudflare proxy and verify `https://minuti.ae/` still returns the page
 
 ## 4. Integration check
 
-- [ ] 4.1 From a fresh session, add a third entry using only `gh api -X PUT repos/TFenby/minutiae/contents/entries/<file>`; verify it appears at `https://minuti.ae/` after the deploy completes with no other action taken
+- [x] 4.1 From a fresh session, add a third entry using only `gh api -X PUT repos/TFenby/minutiae/contents/entries/<file>`; verify it appears at `https://minuti.ae/` after the deploy completes with no other action taken
