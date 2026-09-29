@@ -10,7 +10,7 @@
 
 - [ ] 2.1 Set `remote.origin.pushurl` to a fresh local bare repository in the scratchpad; verify `git remote -v` shows the local path for push
 - [ ] 2.2 Run a fresh subagent with the raw Sienna message verbatim and no other context; verify against the pass criteria in design.md and record the outcome
-- [ ] 2.3 If the test fails, revise `AGENTS.md`, reset the test commit, and re-run 2.2 until it passes; record each revision's reason in the commit message
+- [ ] 2.3 If the test fails, revise `AGENTS.md`, reset the test commit, and re-run 2.2 until it passes; record each revision's reason in the commit message. Run 1 (2026-09-29): agent wrote and committed first, asked about seat position after; also wrote "standard ottomans" where its source said "available with AWD". Revised: ask before writing, prefer primary sources, claim only what the source says
 - [ ] 2.4 Unset the push guard; verify GitHub `main` SHA still equals the last pushed SHA, then push
 
 ## 3. Wrap-up

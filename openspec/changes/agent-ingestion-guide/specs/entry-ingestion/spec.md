@@ -24,16 +24,27 @@ Any claim the submitter marks as uncertain (a question mark, "I think", "maybe")
 - **WHEN** no source confirms or refutes an uncertain claim
 - **THEN** the entry keeps the claim, marked unverified
 
-### Requirement: Plausibility check before writing
-Before writing, the agent SHALL check units and internal consistency of the submitted numbers. A contradiction SHALL be flagged in the entry or raised with the submitter, never silently corrected.
+### Requirement: Unstated conditions are asked about before writing
+When a submitted value depends on a condition the submission does not state (position, configuration, version, endpoints), or two values contradict each other, the agent SHALL ask the submitter and wait before writing. Only when no one can answer SHALL the agent write, and then the entry MUST say the condition was not stated. Units and internal consistency SHALL be checked, and a contradiction SHALL never be silently corrected.
 
-#### Scenario: Consistent nested measurements
-- **WHEN** one measurement is described as spanning a longer path than another and its value is larger
-- **THEN** the agent proceeds without comment
+#### Scenario: Measurement depends on an unstated position
+- **WHEN** a length is measured to a movable seat and the message does not say where the seat was
+- **THEN** the agent asks where the seat was before writing the entry, and the entry records the answer beside the number
+
+#### Scenario: Nobody can answer
+- **WHEN** the agent asks and receives no answer because it is running unattended
+- **THEN** the entry records the value with the condition marked as not stated
 
 #### Scenario: Contradictory measurements
 - **WHEN** two submitted values cannot both be true as described
-- **THEN** the entry records both with a note of the conflict, or the agent asks the submitter before writing
+- **THEN** the agent asks the submitter, or failing that records both with a note of the conflict
+
+### Requirement: Sources are primary and claims match them
+Fact-checks SHALL prefer primary sources (manufacturer, official documentation, maintainer changelogs). A secondary source SHALL be identified as such in the entry. The entry SHALL claim only what the cited source states, and every number not supplied by the submitter SHALL carry a source.
+
+#### Scenario: Source says less than the claim
+- **WHEN** a source says a feature is available on a grade and the agent would otherwise write that it is standard
+- **THEN** the entry says available, matching the source
 
 ### Requirement: Nothing invented, nothing private
 The entry SHALL contain only facts from the submission or from a source it names. It SHALL exclude personal data such as names, addresses, plates, account identifiers, and anything the submitter marked private.

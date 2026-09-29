@@ -12,13 +12,14 @@ This repository publishes tiny hard-won facts at <https://minuti.ae>: one Markdo
 
 ## Ingesting a raw message
 
-Submissions are terse, mix units, and carry hunches ("irremovable?", "I think the trim matters"). Do this, in order:
+Submissions are terse, mix units, and carry hunches ("irremovable?", "I think the trim matters"). This is a conversation, not a one-shot. Do this, in order:
 
 1. **Extract every claim.** Keep the submitter's measurements exactly as given. You may add a conversion beside a value (4 ft, 48 in) but never replace a submitted number with one from the web. The submitter's numbers are the point of the entry.
-2. **Sanity-check.** Are units consistent? Do nested measurements order sensibly, so a longer path carries a larger number? Record a contradiction in the entry as a conflict, or ask the submitter if you can. Never silently fix one.
-3. **Fact-check the checkable parts.** Every hunch or question mark gets checked against a source: manufacturer page, owner's manual, spec sheet, reputable review. State the outcome for each: confirmed, corrected, or unverified. Do not check the submitter's own measurements against the web; published specs may be noted as a separate sourced fact if they differ.
-4. **Write the entry.** Heading, numbers first, then the checked facts, then the provenance line. Keep it short. Include nothing that is not from the message or a source you name. Exclude names, addresses, plates, account identifiers, and anything the submitter marked private.
-5. **Commit.** One entry per commit, containing only that file: `git add entries/<file> && git commit -m "add <file>"`, then `git push`. Without a checkout, use the `gh api` write path in the README.
+2. **Ask before you write.** A number means nothing without its conditions: where a seat was positioned, which version, which settings, what the two endpoints were. If the message leaves a condition unstated and that condition changes what the number means, ask the submitter and wait for the answer. Do the same for contradictions and for units you cannot resolve. Only if nobody can answer (you are running unattended) do you write anyway, and then the entry says the condition was not stated. Asking is not a failure; a confident entry over a silent assumption is.
+3. **Sanity-check.** Units consistent? Nested measurements ordered sensibly, so a longer path carries a larger number? Never silently fix a contradiction; ask, or record it as a conflict.
+4. **Fact-check the checkable parts.** Every hunch or question mark gets checked. Prefer primary sources: the manufacturer's site or owner's manual, official documentation, the project's own changelog. A reseller's blog or a forum thread is a last resort, and the entry says so. Claim only what the source actually says, and give every number that is not the submitter's a source. State the outcome for each claim: confirmed, corrected, or unverified. Do not check the submitter's own measurements against the web; a differing published spec may be noted as a separate sourced fact.
+5. **Write the entry.** Heading, numbers first with their conditions, then the checked facts, then the provenance line. Keep it short. Include nothing that is not from the message, the submitter's answers, or a source you name. Exclude names, addresses, plates, account identifiers, and anything the submitter marked private.
+6. **Commit.** One entry per commit, containing only that file: `git add entries/<file> && git commit -m "add <file>"`, then `git push`. Without a checkout, use the `gh api` write path in the README.
 
 If the message cannot become an entry (nothing checkable, private, or contradictory beyond repair), say so and stop rather than writing a bad one.
 
@@ -27,7 +28,7 @@ If the message cannot become an entry (nothing checkable, private, or contradict
 ```markdown
 # <Subject>: <what was measured or what works>
 
-<the submitted numbers or steps, as given, with conversions beside them if useful>
+<the submitted numbers or steps, as given, with their conditions and conversions beside them>
 
 <each checked claim, with its outcome and source>
 
