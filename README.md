@@ -4,7 +4,7 @@ Tiny facts that were hard to find once and shouldn't have to be found twice. Pub
 
 ## Adding an entry
 
-Create one Markdown file under `entries/`. That is the whole contract.
+Create one Markdown file under `entries/`. That is the whole contract. Turning a raw message into an entry, with the checking that implies, is described in [AGENTS.md](AGENTS.md).
 
 - Name it `YYYY-MM-DD-slug.md`: the date you recorded or last verified the fact, then a lowercase slug of letters, digits and hyphens.
 - Make the first line a `#` heading that names the fact.
