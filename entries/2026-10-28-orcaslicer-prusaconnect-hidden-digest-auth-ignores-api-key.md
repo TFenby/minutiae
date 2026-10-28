@@ -13,11 +13,11 @@
 > Fix: switch Host Type to PrusaLink, set Authorization Type to API key, then switch back to PrusaConnect and re-enter the key.
 > ```
 
-**Robot asked:** Which OrcaSlicer version were you on when you hit this?
+**Robot asked**
 
-**Robot asked:** Did you see the 401 yourself, and did the fix work on your setup, or did the explanation come from somewhere else?
-
-**Robot asked:** Who wrote the quoted block: you, or another tool or AI session?
+1. Which OrcaSlicer version were you on when you hit this?
+2. Did you see the 401 yourself, and did the fix work on your setup, or did the explanation come from somewhere else?
+3. Who wrote the quoted block: you, or another tool or AI session?
 
 **Follow-up**
 
