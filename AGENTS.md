@@ -10,6 +10,7 @@ This repository publishes tiny hard-won facts at <https://minuti.ae>: one Markdo
 - `## Human`: only what people actually said, verbatim. The original submission as a blockquote under **Submission**. Each message you sent as one **Robot asked:** line; if that message asked several questions, put them as a numbered list under a single **Robot asked** label instead, so the entry does not read as several messages. Each answer as a blockquote under **Follow-up**. No summaries, no commentary, no note about what went unanswered: if nothing more was said, nothing more appears. Ends with `Signed: <submitter>`; the project owner signs as "Project owner".
 - `## Robot`: your analysis. Numbers first with their conditions and conversions, then each checked claim with its outcome and source, then the provenance line (as-of date, what was measured by whom, what was confirmed against which source, what is unverified). Ends with `Signed: <AI make and model>, running as <runtime>`.
 - Last line: `* * *`, a horizontal rule that marks the file boundary on the page. Not `---`, which pandoc can read as a metadata block.
+- URLs are hyperlinks unless the submitter says otherwise. In verbatim text, wrap a bare URL in angle brackets (`<https://example.com>`) so the words stay unchanged.
 - Nothing else. No front matter. Touch no other file.
 
 When the format changes, the marker's number changes and the guide changes. Existing entries are never rewritten to the new format. Instead, add a divider file `entries/YYYY-MM-DD-0-format-N.md` (the `0` sorts it before that day's entries): a rule, a heading such as "Entry format N begins below", one sentence on what changed, and a closing rule. That is how the page shows where each generation begins.
@@ -26,6 +27,10 @@ Submissions are terse, mix units, and carry hunches ("irremovable?", "I think th
 6. **Commit.** One entry per commit, containing only that file: `git add entries/<file> && git commit -m "add <file>"`, then `git push`. Without a checkout, use the `gh api` write path in the README.
 
 If the message cannot become an entry (nothing checkable, private, or contradictory beyond repair), say so and stop rather than writing a bad one.
+
+## Posting without the robot
+
+If the submitter opts out of review, in any wording ("don't invoke robot", "don't need robot", "no robot review", "post it directly"), skip steps 2 to 4. Leave the line that asks for the opt-out out of the Submission blockquote; quote only the minutia itself. Write no Robot asked or Follow-up. The Robot section is the single line `Robot was not invoked for this task.` with no signature. Then write the heading, add the marker and rule, and commit as usual.
 
 ## Shape of a finished entry
 
