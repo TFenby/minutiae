@@ -6,7 +6,7 @@ Tiny facts that were hard to find once and shouldn't have to be found twice. Pub
 
 Create one Markdown file under `entries/`. That is the whole contract. Turning a raw message into an entry, with the checking that implies, is described in [AGENTS.md](AGENTS.md).
 
-- Name it `YYYY-MM-DD-slug.md`: the date you recorded or last verified the fact, then a lowercase slug of letters, digits and hyphens.
+- Name it `YYYY-MM-DD-HHMM-slug.md`: the date you recorded or last verified the fact, the time in UTC (`date -u +%Y-%m-%d-%H%M`) so same-day entries sort in posting order, then a lowercase slug of letters, digits and hyphens.
 - Make the first line a `#` heading that names the fact.
 - Write the rest as plain Markdown in the `Human` and `Robot` sections described in [AGENTS.md](AGENTS.md). Fenced code blocks and links render.
 

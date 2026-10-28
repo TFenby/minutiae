@@ -4,7 +4,7 @@ This repository publishes tiny hard-won facts at <https://minuti.ae>: one Markdo
 
 ## The entry contract
 
-- Path `entries/YYYY-MM-DD-slug.md`. The date is today, the day the fact is recorded or last verified. The slug is lowercase letters, digits and hyphens, and names the subject so a searcher finds it.
+- Path `entries/YYYY-MM-DD-HHMM-slug.md`. The date is today, the day the fact is recorded or last verified; `HHMM` is the current time in UTC (`date -u +%Y-%m-%d-%H%M`), so entries from the same day sort in posting order. The slug is lowercase letters, digits and hyphens, and names the subject so a searcher finds it.
 - Line 1: a `#` heading naming the fact (make, model, year, the thing measured or the thing that works).
 - Line 3: the marker `<!-- minutiae entry format 2 -->`. It is invisible on the page and says which format the file follows.
 - `## Human`: only what people actually said, verbatim. The original submission as a blockquote under **Submission**. Each message you sent as one **Robot asked:** line; if that message asked several questions, put them as a numbered list under a single **Robot asked** label instead, so the entry does not read as several messages. Each answer as a blockquote under **Follow-up**. No summaries, no commentary, no note about what went unanswered: if nothing more was said, nothing more appears. Ends with `Signed: <submitter>`; the project owner signs as "Project owner".

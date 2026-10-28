@@ -13,11 +13,15 @@ Each minutia SHALL be a single Markdown file under `entries/` at the repository 
 - **THEN** the entry appears on the published page after the next build with no other change required
 
 ### Requirement: Entry file naming
-Entry filenames MUST match `YYYY-MM-DD-<slug>.md`, where the date is the day the fact was recorded or last verified and `<slug>` is lowercase ASCII letters, digits and hyphens.
+Entry filenames MUST match `YYYY-MM-DD-HHMM-<slug>.md`, where the date is the day the fact was recorded or last verified, `HHMM` is the UTC time it was posted, and `<slug>` is lowercase ASCII letters, digits and hyphens.
 
 #### Scenario: Well-formed name sorts chronologically
 - **WHEN** entries named `2024-03-10-signal-cli-nixos.md` and `2026-09-28-sienna-cargo.md` both exist
 - **THEN** the 2024 entry appears before the 2026 entry on the published page
+
+#### Scenario: Same-day entries sort by posting time
+- **WHEN** entries named `2026-10-28-1945-orcaslicer.md` and `2026-10-28-1954-immich.md` both exist
+- **THEN** the 1945 entry appears before the 1954 entry on the published page
 
 ### Requirement: Entry content shape
 The first line of an entry MUST be a Markdown heading naming the minutia. The remainder is free-form Markdown; fenced code blocks and links MUST render on the published page.
