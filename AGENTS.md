@@ -7,7 +7,7 @@ This repository publishes tiny hard-won facts at <https://minuti.ae>: one Markdo
 - Path `entries/YYYY-MM-DD-slug.md`. The date is today, the day the fact is recorded or last verified. The slug is lowercase letters, digits and hyphens, and names the subject so a searcher finds it.
 - Line 1: a `#` heading naming the fact (make, model, year, the thing measured or the thing that works).
 - Line 3: the marker `<!-- minutiae entry format 2 -->`. It is invisible on the page and says which format the file follows.
-- `## Human`: only what people actually said, verbatim. The original submission as a blockquote under **Submission**. Each question you asked as a **Robot asked:** line. Each answer as a blockquote under **Follow-up**. No summaries, no commentary, no note about what went unanswered: if nothing more was said, nothing more appears. Ends with `Signed: <submitter>`; the project owner signs as "Project owner".
+- `## Human`: only what people actually said, verbatim. The original submission as a blockquote under **Submission**. Each message you sent as one **Robot asked:** line; if that message asked several questions, put them as a numbered list under a single **Robot asked** label instead, so the entry does not read as several messages. Each answer as a blockquote under **Follow-up**. No summaries, no commentary, no note about what went unanswered: if nothing more was said, nothing more appears. Ends with `Signed: <submitter>`; the project owner signs as "Project owner".
 - `## Robot`: your analysis. Numbers first with their conditions and conversions, then each checked claim with its outcome and source, then the provenance line (as-of date, what was measured by whom, what was confirmed against which source, what is unverified). Ends with `Signed: <AI make and model>, running as <runtime>`.
 - Last line: `* * *`, a horizontal rule that marks the file boundary on the page. Not `---`, which pandoc can read as a metadata block.
 - Nothing else. No front matter. Touch no other file.
@@ -41,6 +41,13 @@ If the message cannot become an entry (nothing checkable, private, or contradict
 > <the message, verbatim>
 
 **Robot asked:** <the question, in one line>
+
+<or, when one message asked several:>
+
+**Robot asked**
+
+1. <first question>
+2. <second question>
 
 **Follow-up**
 
